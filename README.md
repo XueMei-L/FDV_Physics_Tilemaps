@@ -43,7 +43,7 @@ Seleccionar los 4 para crear la animacion walkdown con el teclado **[shift]** y 
 
 ![alt text](Unity_JJ1V1VIGVg.gif)
 
-## Actividad 3: Creamos los scripts para controlar el movimiento para el personaje. Inicialmente vamos a hacer una versión sin salto. Añadir los scripts necesarios para moverlo por la pantalla. En este caso sólo tendremos que mover las coordenadas (X, Y). 
+## Actividad 3-4-5: Creamos los scripts para controlar el movimiento para el personaje. Inicialmente vamos a hacer una versión sin salto. Añadir los scripts necesarios para moverlo por la pantalla. En este caso sólo tendremos que mover las coordenadas (X, Y). El movimiento de derecha a izquierda lo logramos modificando transform.position(x, y), para ello podemos usar transform.Translate(avance, 0).
 
 ## Paso 1: Crear los scripts
 
@@ -79,7 +79,7 @@ Creamos otra animación se llama **WalkDown** para realizar este paso, aplicarle
 
 ![alt text](Unity_pS64Im2Amt.gif)
 
-## Actividad 4: Además necesitamos que el sprite se oriente hacia donde camina, podemos hacerlo usando la propiedad Flip en el eje X en función de si se está moviendo hacia la izquierda (movimiento negativo) o hacia la derecha (movimiento positivo). 
+## Actividad 6: Además necesitamos que el sprite se oriente hacia donde camina, podemos hacerlo usando la propiedad Flip en el eje X en función de si se está moviendo hacia la izquierda (movimiento negativo) o hacia la derecha (movimiento positivo). 
 
 En el codigo de **PlayerController.cs** añadimos la propiedad **Flip** para que se mueve hacia izq(no cambiar), hacia derecha(si cambiar)
 
