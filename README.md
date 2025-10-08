@@ -113,9 +113,9 @@ public class PlayerController : MonoBehaviour
 }
 ```
 ## Resultado:
-![alt text](Unity_1SCErveIZh.gif)
+![alt text](Unity_26Om2Ussih.gif)
 
-## Actividad 5: Crear las distintasanimaciones para el personaje.
+## Actividad 5: Crear las distintas animaciones para el personaje.
 Configurar el [animator] para diferentes direcciones
 ![alt text](imgAndGif/image-8.png)
 
