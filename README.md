@@ -117,7 +117,30 @@ public class PlayerController : MonoBehaviour
 
 ## Actividad 5: Crear las distintas animaciones para el personaje.
 Configurar el [animator] para diferentes direcciones
-![alt text](imgAndGif/image-8.png)
+![alt text](image-6.png)
+
+Estados：
+Idle     (para movimiento quieto)
+WalkDown (para movimiento hacia abajo)
+WalkUp   (para movimiento hacia detrás)
+WalkLeft (para movimiento hacia izquierda y derecha)
+
+```
+[Idle] --> [WalkLeft]     when isWalking is true
+[WalkLeft] --> [Idle]     when isWalking is false
+
+[Idle] --> [WalkUp]       when verticalMovement > 0
+[WalkUp] --> [Idle]       when isWalking is false
+
+[Idle] --> [WalkDown]     when verticalMovement < 0
+[WalkDown] --> [Idle]     when isWalking is false
+
+[WalkLeft] --> [WalkUp]   when verticalMovement > 0
+[WalkUp] --> [WalkLeft]   when isWalking is true AND verticalMovement < 1
+
+[WalkLeft] --> [WalkDown] when verticalMovement < 0
+[WalkDown] --> [WalkLeft] when isWalking is true AND verticalMovement > -1
+```
 
 Modificar el script **[PlayerController]**, el parametro **[isWalking]** y [y] para que se puede modificar cuando el personaje esta moviendo y position de vertical.
 
@@ -179,4 +202,4 @@ public class PlayerController : MonoBehaviour
 
 ## Resultado:
 
-![alt text](imgAndGif/Unity_oosbfcWMBc.gif)
+![alt text](Unity_pr3WB4lVKZ.gif)
