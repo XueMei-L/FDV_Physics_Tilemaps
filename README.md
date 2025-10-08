@@ -12,33 +12,33 @@
 
 ## Paso 1. Crear un proyecto unity 2D
 
-![alt text](image.png)
+![alt text](imgs/image.png)
 
 ## Paso 2. Añadir el atlas de sprites y realizar la configuración
 En el **[Assets]** - **[Scenes]**, realizar la configuracion en el panel de **[Inspector]**
 
-Cambiar [sprite Mode] -> [multiple], puesto que hay varios personajes en una imagen, y [Compression] -> [None], significa que no baja la calidad de la imagen.
+Cambiar [sprite Mode] -> [multiple], puesto que hay varios personajes en una imgs/imagen, y [Compression] -> [None], significa que no baja la calidad de la imgs/imagen.
 
-![alt text](image-1.png)
+![alt text](imgs/image-1.png)
 
 ## Paso 3. Abrir editor de Sprite, y realizar la separación de cada personaje
-![alt text](image-2.png)
+![alt text](imgs/image-2.png)
 
 En **[Slice]** selecciona **[Type]** -> **[Automatic]**, y **[Slice]**, finalmente dar a **[Apply]** y cerrar el editor.
 
-![alt text](image-3.png)
+![alt text](imgs/image-3.png)
 
 Así ya tenmemos todos los sprites separados automaticamente, ahora añadimos uno en la escena.
 
 
-## Actividad 2: Creamos un objeto 2D, arrastrando un conjunto de imágenes que selecciones al objeto añadiremos una animación. Agregar al personaje la animación “Walk Down” . Añadir otra imagen y generarle otra animación.  De esa forma Unity crea un objeto Animation, la primera vez que se crea, también añade un objeto Animator Controller.
+## Actividad 2: Creamos un objeto 2D, arrastrando un conjunto de imágenes que selecciones al objeto añadiremos una animación. Agregar al personaje la animación “Walk Down” . Añadir otra imgs/imagen y generarle otra animación.  De esa forma Unity crea un objeto Animation, la primera vez que se crea, también añade un objeto Animator Controller.
 
 ## Paso 1. Crear animación
 Seleccionar los 4 para crear la animacion walkdown con el teclado **[shift]** y arrastrar a la escena, se crea una animator y su animación.
-![alt text](image-5.png)
+![alt text](imgs/image-5.png)
 
 ### Resultado:
-![alt text](Unity_UT1czG5p1M.gif)
+![alt text](imgs/Unity_UT1czG5p1M.gif)
 
 
 ## Actividad 3-4-5: Creamos los scripts para controlar el movimiento para el personaje. Inicialmente vamos a hacer una versión sin salto. Añadir los scripts necesarios para moverlo por la pantalla. En este caso sólo tendremos que mover las coordenadas (X, Y). El movimiento de derecha a izquierda lo logramos modificando transform.position(x, y), para ello podemos usar transform.Translate(avance, 0).
@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
 Creamos la animación se llama **WalkDown** para realizar este paso, aplicarle el script anterior. Ahora nuestra personaje se puede mover de izquierda y derecha.
 
 ### Resultado:
-![alt text](Unity_SlsDjdUGFG.gif)
+![alt text](imgs/Unity_SlsDjdUGFG.gif)
 
 ## Actividad 6: Además necesitamos que el sprite se oriente hacia donde camina, podemos hacerlo usando la propiedad Flip en el eje X en función de si se está moviendo hacia la izquierda (movimiento negativo) o hacia la derecha (movimiento positivo). 
 
@@ -113,11 +113,11 @@ public class PlayerController : MonoBehaviour
 }
 ```
 ## Resultado:
-![alt text](Unity_26Om2Ussih.gif)
+![alt text](imgs/Unity_26Om2Ussih.gif)
 
 ## Actividad 5: Crear las distintas animaciones para el personaje.
 Configurar el [animator] para diferentes direcciones
-![alt text](image-6.png)
+![alt text](imgs/image-6.png)
 
 Estados：
 Idle     (para movimiento quieto)
@@ -202,4 +202,4 @@ public class PlayerController : MonoBehaviour
 
 ## Resultado:
 
-![alt text](Unity_pr3WB4lVKZ.gif)
+![alt text](imgs/Unity_pr3WB4lVKZ.gif)
