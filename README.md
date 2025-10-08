@@ -129,17 +129,17 @@ WalkLeft (para movimiento hacia izquierda y derecha)
 [Idle] --> [WalkLeft]     when isWalking is true
 [WalkLeft] --> [Idle]     when isWalking is false
 
-[Idle] --> [WalkUp]       when verticalMovement > 0
+[Idle] --> [WalkUp]       when y > 0
 [WalkUp] --> [Idle]       when isWalking is false
 
-[Idle] --> [WalkDown]     when verticalMovement < 0
+[Idle] --> [WalkDown]     when y < 0
 [WalkDown] --> [Idle]     when isWalking is false
 
-[WalkLeft] --> [WalkUp]   when verticalMovement > 0
-[WalkUp] --> [WalkLeft]   when isWalking is true AND verticalMovement < 1
+[WalkLeft] --> [WalkUp]   when y > 0
+[WalkUp] --> [WalkLeft]   when isWalking is true AND y < 1
 
-[WalkLeft] --> [WalkDown] when verticalMovement < 0
-[WalkDown] --> [WalkLeft] when isWalking is true AND verticalMovement > -1
+[WalkLeft] --> [WalkDown] when y < 0
+[WalkDown] --> [WalkLeft] when isWalking is true AND y > -1
 ```
 
 Modificar el script **[PlayerController]**, el parametro **[isWalking]** y [y] para que se puede modificar cuando el personaje esta moviendo y position de vertical.
