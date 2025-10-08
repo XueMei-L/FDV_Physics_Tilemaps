@@ -2,16 +2,15 @@
 
 // public class PlayerController : MonoBehaviour
 // {
-//     public float speed;
+//     public float speed = 10f;
 
-//     // Update is called once per frame
 //     void Update()
 //     {
-//         float moveHorizontal = Input.GetAxisRaw("Horizontal");
-//         float moveVertical = Input.GetAxisRaw("Vertical");
+//         // get horizontal input
+//         float horizontalInput  = Input.GetAxisRaw("Horizontal");
 
-//         // Create a normalized movement vector
-//         Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0.0f).normalized;
+//         // Create a movement vector
+//         Vector2 movement = new Vector2(horizontalInput, 0f);
 
 //         // Move the object frame rate independently
 //         transform.Translate(movement * speed * Time.deltaTime);

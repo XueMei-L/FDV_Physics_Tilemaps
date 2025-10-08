@@ -30,18 +30,16 @@ En **[Slice]** selecciona **[Type]** -> **[Automatic]**, y **[Slice]**, finalmen
 
 Así ya tenmemos todos los sprites separados automaticamente, ahora añadimos uno en la escena.
 
-![alt text](image-5.png)
 
 ## Actividad 2: Creamos un objeto 2D, arrastrando un conjunto de imágenes que selecciones al objeto añadiremos una animación. Agregar al personaje la animación “Walk Down” . Añadir otra imagen y generarle otra animación.  De esa forma Unity crea un objeto Animation, la primera vez que se crea, también añade un objeto Animator Controller.
 
 ## Paso 1. Crear animación
 Seleccionar los 4 para crear la animacion walkdown con el teclado **[shift]** y arrastrar a la escena, se crea una animator y su animación.
-
-![alt text](image-6.png)
+![alt text](image-5.png)
 
 ### Resultado:
+![alt text](Unity_UT1czG5p1M.gif)
 
-![alt text](Unity_JJ1V1VIGVg.gif)
 
 ## Actividad 3-4-5: Creamos los scripts para controlar el movimiento para el personaje. Inicialmente vamos a hacer una versión sin salto. Añadir los scripts necesarios para moverlo por la pantalla. En este caso sólo tendremos que mover las coordenadas (X, Y). El movimiento de derecha a izquierda lo logramos modificando transform.position(x, y), para ello podemos usar transform.Translate(avance, 0).
 
@@ -55,29 +53,25 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
+    public float speed = 10f;
 
-    // Update is called once per frame
     void Update()
     {
-        float moveHorizontal = Input.GetAxisRaw("Horizontal");
-        float moveVertical = Input.GetAxisRaw("Vertical");
+        // get horizontal input
+        float horizontalInput  = Input.GetAxisRaw("Horizontal");
 
-        // Create a normalized movement vector
-        Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0.0f).normalized;
+        // Create a movement vector
+        Vector2 movement = new Vector2(horizontalInput, 0f);
 
         // Move the object frame rate independently
         transform.Translate(movement * speed * Time.deltaTime);
     }
 }
 ```
-Creamos otra animación se llama **WalkDown** para realizar este paso, aplicarle el script anterior y modificar la velocidad del personaje en el componente **[Script]**
-
-![alt text](image-7.png)
+Creamos la animación se llama **WalkDown** para realizar este paso, aplicarle el script anterior. Ahora nuestra personaje se puede mover de izquierda y derecha.
 
 ### Resultado:
-
-![alt text](Unity_pS64Im2Amt.gif)
+![alt text](Unity_SlsDjdUGFG.gif)
 
 ## Actividad 6: Además necesitamos que el sprite se oriente hacia donde camina, podemos hacerlo usando la propiedad Flip en el eje X en función de si se está moviendo hacia la izquierda (movimiento negativo) o hacia la derecha (movimiento positivo). 
 
