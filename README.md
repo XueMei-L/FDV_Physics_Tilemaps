@@ -30,20 +30,16 @@ físicos en Unity.
 ![alt text](image-1.png)
 ![alt text](image-2.png)
 
-Hacer la configuracion de colicio
-![alt text](image-3.png)
-
-## a. Ninguno de los objetos será físico.
-
-![alt text](image-4.png)
 
 
-Caso A — Ninguno de los objetos será físico
+## Caso A. Ninguno de los objetos será físico.
 Configuración de personajes:
 - Persona A, tiene un script de movimiento
 - Persona B, nada de script
+- Ninguna configuración de **Rigidbody** y **Collider**
 
 Resultado:
+
 | Objeto   | Rigidbody2D | Collider2D | Reacción física | Eventos |
 |-----------|--------------|-------------|------------------|----------|
 | PersonA   | NO           | NO          | NO               | NO       |
@@ -52,6 +48,7 @@ Resultado:
 Resultado en git:
 
 Hice una configuración de **Persona A** -> **Inspector** -> **Sprite Renderer** -> **Order in Layer** -> cambiar valor a 1 (para tener la visualización de mayor prioridad)
+![alt text](image-4.png)
 
 ## b. Un objeto tiene físicas y el otro no.
 
@@ -64,3 +61,6 @@ Hice una configuración de **Persona A** -> **Inspector** -> **Sprite Renderer**
 ## f. Ambos objetos son físicos y uno de ellos está marcado como IsTrigger.
 
 ## g. Uno de los objetos es cinemático.
+
+Hacer la configuracion de colicio
+![alt text](image-3.png)
