@@ -160,3 +160,22 @@ Después de activar cinemático para el objeto B, el resultado es que cuando el 
 ![alt text](Unity_phX8ChQe5h.gif)
 
 
+## Incorpora elementos físicos en tu escena que respondan a las siguientes restricciones:
+## a. Objeto estático que ejerce de barrera infranqueable.
+Creé un muro estático en el suelo.
+![alt text](image-11.png)
+
+## b. Zona en la que los objetos que caen en ella son impulsados hacia adelante
+Crear un GameObject **Acceleration zone**, añadir un Box Collider 2D a esa zona, y Area Effector 2D, un efecto de area, cambiando su Magnitud. Activar is Trigger y Used By Effector.
+
+![alt text](image-12.png)
+
+Resultado:
+
+El objeto b se cae encima de la zona, acelera inmediatamente. y el objeto A tiene una velocidad lenta al principio y cuando pasa la zona, también acelera.
+
+![alt text](Unity_qE8mdcPxex.gif)
+
+## c. Objeto que es arrastrado por otro a una distancia fija
+## d. Objeto que al colisionar con otros sigue un comportamiento totalmente físico.
+## e. Incluye dos capas que asignes a diferentes tipos de objetos y que permita evitar colisiones entre ellos.
