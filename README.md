@@ -182,9 +182,35 @@ Crear otro GameObject, configurar el cuadro que se puede arrastrar el objeto A. 
 
 Resultado:
 Se ve que aunque no arrasta muy bien, pero cuando el cuadro se mueve, el objeto A también.
+
 ![alt text](Unity_WY8QaGv9lF.gif)
 
 ## d. Objeto que al colisionar con otros sigue un comportamiento totalmente físico.
+Crear un mudo vertical, para que cuando el persona A y B colisiona con el mudo.
 
+![alt text](image-14.png)
+
+Resultado: 
+
+No se puede pasar, y tiene efecto de rebote cuando choca.
+
+![alt text](Unity_gja3cB5ArG.gif)
 
 ## e. Incluye dos capas que asignes a diferentes tipos de objetos y que permita evitar colisiones entre ellos.
+
+Crear dos capas haciendo **Inspector** -> **Layer** -> **Add Layer**
+Una capa para los objetos de fondo, y otra para personajes y obstaculos
+
+![alt text](image-15.png)
+
+Ahora asignamos a los objetos personajes y obstaculos como **ColliderLayer**
+y los objetos de fondo a **BackGroundLayer**(Tree).
+
+Luego, entramos a project Setting para configurar que ColliderLayer no teien colisión.
+
+![alt text](image-16.png)
+
+Resultado: 
+Se puede ver que los objetos que tiene la capa **BackGroundLayer** no hay colisión con objetos, y los objetos con la capa **ColliderLayer** sí hay colisión.
+
+![alt text](Unity_CN4j4UUFT0.gif)
