@@ -51,7 +51,20 @@ Hice una configuración de **Persona A** -> **Inspector** -> **Sprite Renderer**
 
 ![alt text](image-4.png)
 
+![alt text](Unity_p7zgHcbcQD.gif)
+
 ## b. Un objeto tiene físicas y el otro no.
+| Objeto   | Rigidbody2D | Collider2D | Reacción física | Eventos |
+|-----------|--------------|-------------|------------------|----------|
+| PersonA   | SÍ           | SÍ          | SÍ               | SÍ       |
+| PersonB   | NO           | NO          | NO               | NO       |
+
+Añadir Box 
+![alt text](image-5.png)
+
+Resultado en gif:
+Se puede ver cuando el personaje choca con el suelo, el comando muestra mensaje -> (la funcion **OnCollision2D**)
+![alt text](Unity_EvWZtKvigX.gif)
 
 ## c. Ambos objetos tienen físicas.
 
@@ -63,5 +76,5 @@ Hice una configuración de **Persona A** -> **Inspector** -> **Sprite Renderer**
 
 ## g. Uno de los objetos es cinemático.
 
-Hacer la configuracion de colicio
+Hacer la configuracion de colicion
 ![alt text](image-3.png)
