@@ -59,11 +59,33 @@ Hice una configuración de **Persona A** -> **Inspector** -> **Sprite Renderer**
 | PersonA   | SÍ           | SÍ          | SÍ               | SÍ       |
 | PersonB   | NO           | NO          | NO               | NO       |
 
-Añadir Box 
+Añadir Box Collider 2D y Rigibody 2D a Player A.
 ![alt text](image-5.png)
 
 Resultado en gif:
-Se puede ver cuando el personaje choca con el suelo, el comando muestra mensaje -> (la funcion **OnCollision2D**)
+Se puede ver que cuando el personaje tiene fisica, se cae y choca con el suelo, el comando muestra mensaje -> (la funcion **OnCollision2D**)
+
+Código añadido a parte de la práctica anterior (2D Sprites)
+```
+private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log($"{name}: OnCollisionEnter2D with {collision.gameObject.name}");
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        Debug.Log($"{name}: OnCollisionExit2D with {collision.gameObject.name}");
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log($"{name}: OnTriggerEnter2D with {other.name}");
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log($"{name}: OnTriggerExit2D with {other.name}");
+    }
+```
 ![alt text](Unity_EvWZtKvigX.gif)
 
 ## c. Ambos objetos tienen físicas.
