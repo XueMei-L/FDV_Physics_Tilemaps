@@ -206,7 +206,7 @@ Una capa para los objetos de fondo, y otra para personajes y obstaculos
 Ahora asignamos a los objetos personajes y obstaculos como **ColliderLayer**
 y los objetos de fondo a **BackGroundLayer**(Tree).
 
-Luego, entramos a project Setting para configurar que ColliderLayer no teien colisión.
+Luego, entramos a **project Setting** para configurar que ColliderLayer no tiene colisión. Desmarca la casilla donde se cruzan.
 
 ![alt text](image-16.png)
 
@@ -214,3 +214,12 @@ Resultado:
 Se puede ver que los objetos que tiene la capa **BackGroundLayer** no hay colisión con objetos, y los objetos con la capa **ColliderLayer** sí hay colisión.
 
 ![alt text](Unity_CN4j4UUFT0.gif)
+
+## Sistema de Tilemaps
+Los objetos que vamos a trabajar en esta sección:
+* Grid
+* Tilemap
+* Tile Palette
+  
+## Construiremos un mapa de juego usando tilemap.
+
