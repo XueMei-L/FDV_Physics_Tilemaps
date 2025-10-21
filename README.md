@@ -126,7 +126,7 @@ Se puede ver el resultado, que el jugador travieza el cuerpo del personaje B.
 | Objeto   | Rigidbody2D | Collider2D | Reacción física | Eventos |
 |-----------|--------------|-------------|------------------|----------|
 | PersonA   | SÍ           | SÍ          | SÍ               | SÍ       |
-| PersonB   | No           | SÍ          | SÍ               | SÍ       |
+| PersonB   | NO           | SÍ          | NO               | SÍ       |
 
 ![alt text](Unity_3wCvCeX12q.gif)
 
@@ -134,6 +134,16 @@ Se puede ver el resultado, que el jugador travieza el cuerpo del personaje B.
 Modificamos el jugador B, para que tenga física, y marca como IsTrigger.
 
 ![alt text](image-9.png)
+
+Resultado:
+Se cae el objeto B atravesando el muro, aunque el muro tiene la colisión. Eso significa que el objeto no tiene colisión con ninguna cosa y tiene física.
+
+| Objeto   | Rigidbody2D | Collider2D | Reacción física | Eventos |
+|-----------|--------------|-------------|------------------|----------|
+| PersonA   | SÍ           | SÍ          | SÍ               | SÍ       |
+| PersonB   | SÍ           | SÍ          | SÍ               | SÍ       |
+
+![alt text](Unity_wTlRQg0gAb.gif)
 
 ## g. Uno de los objetos es cinemático.
 
