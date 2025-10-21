@@ -177,5 +177,14 @@ El objeto b se cae encima de la zona, acelera inmediatamente. y el objeto A tien
 ![alt text](Unity_qE8mdcPxex.gif)
 
 ## c. Objeto que es arrastrado por otro a una distancia fija
+Crear otro GameObject, configurar el cuadro que se puede arrastrar el objeto A. Activar Enable Collision para tener una colisión entre ellos.
+![alt text](image-13.png)
+
+Resultado:
+Se ve que aunque no arrasta muy bien, pero cuando el cuadro se mueve, el objeto A también.
+![alt text](Unity_WY8QaGv9lF.gif)
+
 ## d. Objeto que al colisionar con otros sigue un comportamiento totalmente físico.
+
+
 ## e. Incluye dos capas que asignes a diferentes tipos de objetos y que permita evitar colisiones entre ellos.
