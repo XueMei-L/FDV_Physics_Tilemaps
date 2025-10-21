@@ -92,12 +92,29 @@ private void OnCollisionEnter2D(Collision2D collision)
 Añadimos Collider 2D y Rigibody 2D al persona B.
 ![alt text](image-6.png)
 
-Resultado: se puede ver que ambos tienes fisicas y se caen encima del muro. Si el jugador A colliona con el jugador B, se puede empujar el jugar, no se puede atravezar.
+Resultado: Se puede ver que ambos tienes fisicas y se caen encima del muro. Si el jugador A colliona con el jugador B, se puede empujar el jugar, no se puede atravezar.
 
-Resultado:
+| Objeto   | Rigidbody2D | Collider2D | Reacción física | Eventos |
+|-----------|--------------|-------------|------------------|----------|
+| PersonA   | SÍ           | SÍ          | SÍ               | SÍ       |
+| PersonB   | SÍ           | SÍ          | SÍ               | SÍ       |
+
 ![alt text](Unity_AcD9NbOS4S.gif)
 
 ## d. Ambos objetos tienen físicas y uno de ellos tiene 10 veces más masa que el otro.
+Cambiamos la masa en el Rigibody2D del jugador B a 10, es 10 veces más que el jugador A.
+
+![alt text](image-7.png)
+
+Resultado:
+Se puede ver el resultado que el jugador A empuja al jugador B más lento.
+
+| Objeto   | Rigidbody2D | Collider2D | Reacción física | Eventos |
+|-----------|--------------|-------------|------------------|----------|
+| PersonA   | SÍ           | SÍ          | SÍ               | SÍ       |
+| PersonB   | SÍ           | SÍ          | SÍ               | SÍ       |
+
+![alt text](Unity_HqqfQ5Fyrg.gif)
 
 ## e. Un objeto tiene físicas y el otro es IsTrigger.
 
