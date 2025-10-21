@@ -146,6 +146,17 @@ Se cae el objeto B atravesando el muro, aunque el muro tiene la colisión. Eso s
 ![alt text](Unity_wTlRQg0gAb.gif)
 
 ## g. Uno de los objetos es cinemático.
+Configuramos el objeto B es cinemático cambiando el BodyType.
+![alt text](image-10.png)
 
-Hacer la configuracion de colicion
-![alt text](image-3.png)
+Resultado:
+Después de activar cinemático para el objeto B, el resultado es que cuando el objeto A quiere atravesar al objeto tiene colisión. y el objeto B no tiene física aunque tiene Rigibody2D.
+
+| Objeto   | Rigidbody2D | Collider2D | Reacción física | Eventos |
+|-----------|--------------|-------------|------------------|----------|
+| PersonA   | SÍ           | SÍ          | SÍ               | SÍ       |
+| PersonB   | SÍ           | SÍ          | SÍ               | SÍ       |
+
+![alt text](Unity_phX8ChQe5h.gif)
+
+
