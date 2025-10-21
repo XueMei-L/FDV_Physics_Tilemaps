@@ -117,8 +117,23 @@ Se puede ver el resultado que el jugador A empuja al jugador B más lento.
 ![alt text](Unity_HqqfQ5Fyrg.gif)
 
 ## e. Un objeto tiene físicas y el otro es IsTrigger.
+Eliminamos la física del objeto B y activar IsTrigger en Collider2D del objeto B.
+![alt text](image-8.png)
+
+Resultado:
+Se puede ver el resultado, que el jugador travieza el cuerpo del personaje B.
+
+| Objeto   | Rigidbody2D | Collider2D | Reacción física | Eventos |
+|-----------|--------------|-------------|------------------|----------|
+| PersonA   | SÍ           | SÍ          | SÍ               | SÍ       |
+| PersonB   | No           | SÍ          | SÍ               | SÍ       |
+
+![alt text](Unity_3wCvCeX12q.gif)
 
 ## f. Ambos objetos son físicos y uno de ellos está marcado como IsTrigger.
+Modificamos el jugador B, para que tenga física, y marca como IsTrigger.
+
+![alt text](image-9.png)
 
 ## g. Uno de los objetos es cinemático.
 
