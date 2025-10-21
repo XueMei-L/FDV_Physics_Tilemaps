@@ -65,7 +65,7 @@ Añadir Box Collider 2D y Rigibody 2D a Player A.
 Resultado en gif:
 Se puede ver que cuando el personaje tiene fisica, se cae y choca con el suelo, el comando muestra mensaje -> (la funcion **OnCollision2D**)
 
-Código añadido a parte de la práctica anterior (2D Sprites)
+Código añadido para dos jugares a parte de la práctica anterior (2D Sprites)
 ```
 private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -89,6 +89,13 @@ private void OnCollisionEnter2D(Collision2D collision)
 ![alt text](Unity_EvWZtKvigX.gif)
 
 ## c. Ambos objetos tienen físicas.
+Añadimos Collider 2D y Rigibody 2D al persona B.
+![alt text](image-6.png)
+
+Resultado: se puede ver que ambos tienes fisicas y se caen encima del muro. Si el jugador A colliona con el jugador B, se puede empujar el jugar, no se puede atravezar.
+
+Resultado:
+![alt text](Unity_AcD9NbOS4S.gif)
 
 ## d. Ambos objetos tienen físicas y uno de ellos tiene 10 veces más masa que el otro.
 
