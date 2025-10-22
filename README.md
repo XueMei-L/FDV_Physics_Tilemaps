@@ -222,4 +222,39 @@ Los objetos que vamos a trabajar en esta sección:
 * Tile Palette
   
 ## Construiremos un mapa de juego usando tilemap.
+Para crear un tilemap, seguimos los siguientes pasos.
 
+![alt text](image-17.png)
+![alt text](image-18.png)
+
+Ahora tenemos un timemap, abrimos la palete de timemap y creamos uno nuevo.
+
+![alt text](image-19.png)
+
+Importar los ficheros importados.
+
+![alt text](image-20.png)
+
+Cambiamos el tamaño de tiles para ajustar cada con una rejilla.
+
+![alt text](image-21.png)
+
+Añadir tiles para construir nuestro mapa.
+
+![alt text](image-22.png)
+
+## El uso de varios Tilemaps.
+
+### 1. crear dos Tilemaps adicionales de obstáculos. uno decorativos y otro obstáculos.
+
+![alt text](image-23.png)
+
+### 2. Agrega a la capa de obstáculos la configuración necesaria para que el Tilemap se construya de forma independiente y el obstáculo actúe como tal. 
+
+Agregamos a Tilemaps Tilemap Colliders, y cambiamos a composite operation a Merge, y añadir Composite Collider 2D, así tenemos los tiles de forma independiente.
+
+![alt text](image-24.png)
+
+Resultado:
+
+![alt text](Unity_G7trtt3Mpt.gif)
