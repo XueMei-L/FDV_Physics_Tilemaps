@@ -27,8 +27,8 @@ Respecto al mapa de juego, se debe trabajar con los objetos:
 Reutilizamos el proyecto anterior 2D, creamos otra escena llamado `ScenePhysics2D` para la practica de Tilemaps, además duplicamos nuestro objeto para probar diferentes configuraciones de objetos
 físicos en Unity.
 
-![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](imgs_Readme/image-1.png)
+![alt text](imgs_Readme/image-2.png)
 
 
 
@@ -49,9 +49,9 @@ Resultado en git:
 
 Hice una configuración de **Persona A** -> **Inspector** -> **Sprite Renderer** -> **Order in Layer** -> cambiar valor a 1 (para tener la visualización de mayor prioridad)
 
-![alt text](image-4.png)
+![alt text](imgs_Readme/image-4.png)
 
-![alt text](Unity_p7zgHcbcQD.gif)
+![alt text](imgs_Readme/Unity_p7zgHcbcQD.gif)
 
 ## b. Un objeto tiene físicas y el otro no.
 | Objeto   | Rigidbody2D | Collider2D | Reacción física | Eventos |
@@ -60,7 +60,7 @@ Hice una configuración de **Persona A** -> **Inspector** -> **Sprite Renderer**
 | PersonB   | NO           | NO          | NO               | NO       |
 
 Añadir Box Collider 2D y Rigibody 2D a Player A.
-![alt text](image-5.png)
+![alt text](imgs_Readme/image-5.png)
 
 Resultado en gif:
 Se puede ver que cuando el personaje tiene fisica, se cae y choca con el suelo, el comando muestra mensaje -> (la funcion **OnCollision2D**)
@@ -86,11 +86,11 @@ private void OnCollisionEnter2D(Collision2D collision)
         Debug.Log($"{name}: OnTriggerExit2D with {other.name}");
     }
 ```
-![alt text](Unity_EvWZtKvigX.gif)
+![alt text](imgs_Readme/Unity_EvWZtKvigX.gif)
 
 ## c. Ambos objetos tienen físicas.
 Añadimos Collider 2D y Rigibody 2D al persona B.
-![alt text](image-6.png)
+![alt text](imgs_Readme/image-6.png)
 
 Resultado: Se puede ver que ambos tienes fisicas y se caen encima del muro. Si el jugador A colliona con el jugador B, se puede empujar el jugar, no se puede atravezar.
 
@@ -99,12 +99,12 @@ Resultado: Se puede ver que ambos tienes fisicas y se caen encima del muro. Si e
 | PersonA   | SÍ           | SÍ          | SÍ               | SÍ       |
 | PersonB   | SÍ           | SÍ          | SÍ               | SÍ       |
 
-![alt text](Unity_AcD9NbOS4S.gif)
+![alt text](imgs_Readme/Unity_AcD9NbOS4S.gif)
 
 ## d. Ambos objetos tienen físicas y uno de ellos tiene 10 veces más masa que el otro.
 Cambiamos la masa en el Rigibody2D del jugador B a 10, es 10 veces más que el jugador A.
 
-![alt text](image-7.png)
+![alt text](imgs_Readme/image-7.png)
 
 Resultado:
 Se puede ver el resultado que el jugador A empuja al jugador B más lento.
@@ -114,11 +114,11 @@ Se puede ver el resultado que el jugador A empuja al jugador B más lento.
 | PersonA   | SÍ           | SÍ          | SÍ               | SÍ       |
 | PersonB   | SÍ           | SÍ          | SÍ               | SÍ       |
 
-![alt text](Unity_HqqfQ5Fyrg.gif)
+![alt text](imgs_Readme/Unity_HqqfQ5Fyrg.gif)
 
 ## e. Un objeto tiene físicas y el otro es IsTrigger.
 Eliminamos la física del objeto B y activar IsTrigger en Collider2D del objeto B.
-![alt text](image-8.png)
+![alt text](imgs_Readme/image-8.png)
 
 Resultado:
 Se puede ver el resultado, que el jugador travieza el cuerpo del personaje B.
@@ -128,12 +128,12 @@ Se puede ver el resultado, que el jugador travieza el cuerpo del personaje B.
 | PersonA   | SÍ           | SÍ          | SÍ               | SÍ       |
 | PersonB   | NO           | SÍ          | NO               | SÍ       |
 
-![alt text](Unity_3wCvCeX12q.gif)
+![alt text](imgs_Readme/Unity_3wCvCeX12q.gif)
 
 ## f. Ambos objetos son físicos y uno de ellos está marcado como IsTrigger.
 Modificamos el jugador B, para que tenga física, y marca como IsTrigger.
 
-![alt text](image-9.png)
+![alt text](imgs_Readme/image-9.png)
 
 Resultado:
 Se cae el objeto B atravesando el muro, aunque el muro tiene la colisión. Eso significa que el objeto no tiene colisión con ninguna cosa y tiene física.
@@ -143,11 +143,11 @@ Se cae el objeto B atravesando el muro, aunque el muro tiene la colisión. Eso s
 | PersonA   | SÍ           | SÍ          | SÍ               | SÍ       |
 | PersonB   | SÍ           | SÍ          | SÍ               | SÍ       |
 
-![alt text](Unity_wTlRQg0gAb.gif)
+![alt text](imgs_Readme/Unity_wTlRQg0gAb.gif)
 
 ## g. Uno de los objetos es cinemático.
 Configuramos el objeto B es cinemático cambiando el BodyType.
-![alt text](image-10.png)
+![alt text](imgs_Readme/image-10.png)
 
 Resultado:
 Después de activar cinemático para el objeto B, el resultado es que cuando el objeto A quiere atravesar al objeto tiene colisión. y el objeto B no tiene física aunque tiene Rigibody2D.
@@ -157,63 +157,63 @@ Después de activar cinemático para el objeto B, el resultado es que cuando el 
 | PersonA   | SÍ           | SÍ          | SÍ               | SÍ       |
 | PersonB   | SÍ           | SÍ          | SÍ               | SÍ       |
 
-![alt text](Unity_phX8ChQe5h.gif)
+![alt text](imgs_Readme/Unity_phX8ChQe5h.gif)
 
 
 ## Incorpora elementos físicos en tu escena que respondan a las siguientes restricciones:
 ## a. Objeto estático que ejerce de barrera infranqueable.
 Creé un muro estático en el suelo.
-![alt text](image-11.png)
+![alt text](imgs_Readme/image-11.png)
 
 ## b. Zona en la que los objetos que caen en ella son impulsados hacia adelante
 Crear un GameObject **Acceleration zone**, añadir un Box Collider 2D a esa zona, y Area Effector 2D, un efecto de area, cambiando su Magnitud. Activar is Trigger y Used By Effector.
 
-![alt text](image-12.png)
+![alt text](imgs_Readme/image-12.png)
 
 Resultado:
 
 El objeto b se cae encima de la zona, acelera inmediatamente. y el objeto A tiene una velocidad lenta al principio y cuando pasa la zona, también acelera.
 
-![alt text](Unity_qE8mdcPxex.gif)
+![alt text](imgs_Readme/Unity_qE8mdcPxex.gif)
 
 ## c. Objeto que es arrastrado por otro a una distancia fija
 Crear otro GameObject, configurar el cuadro que se puede arrastrar el objeto A. Activar Enable Collision para tener una colisión entre ellos.
-![alt text](image-13.png)
+![alt text](imgs_Readme/image-13.png)
 
 Resultado:
 Se ve que aunque no arrasta muy bien, pero cuando el cuadro se mueve, el objeto A también.
 
-![alt text](Unity_WY8QaGv9lF.gif)
+![alt text](imgs_Readme/Unity_WY8QaGv9lF.gif)
 
 ## d. Objeto que al colisionar con otros sigue un comportamiento totalmente físico.
 Crear un mudo vertical, para que cuando el persona A y B colisiona con el mudo.
 
-![alt text](image-14.png)
+![alt text](imgs_Readme/image-14.png)
 
 Resultado: 
 
 No se puede pasar, y tiene efecto de rebote cuando choca.
 
-![alt text](Unity_gja3cB5ArG.gif)
+![alt text](imgs_Readme/Unity_gja3cB5ArG.gif)
 
 ## e. Incluye dos capas que asignes a diferentes tipos de objetos y que permita evitar colisiones entre ellos.
 
 Crear dos capas haciendo **Inspector** -> **Layer** -> **Add Layer**
 Una capa para los objetos de fondo, y otra para personajes y obstaculos
 
-![alt text](image-15.png)
+![alt text](imgs_Readme/image-15.png)
 
 Ahora asignamos a los objetos personajes y obstaculos como **ColliderLayer**
 y los objetos de fondo a **BackGroundLayer**(Tree).
 
 Luego, entramos a **project Setting** para configurar que ColliderLayer no tiene colisión. Desmarca la casilla donde se cruzan.
 
-![alt text](image-16.png)
+![alt text](imgs_Readme/image-16.png)
 
 Resultado: 
 Se puede ver que los objetos que tiene la capa **BackGroundLayer** no hay colisión con objetos, y los objetos con la capa **ColliderLayer** sí hay colisión.
 
-![alt text](Unity_CN4j4UUFT0.gif)
+![alt text](imgs_Readme/Unity_CN4j4UUFT0.gif)
 
 ## Sistema de Tilemaps
 Los objetos que vamos a trabajar en esta sección:
@@ -224,40 +224,40 @@ Los objetos que vamos a trabajar en esta sección:
 ## Construiremos un mapa de juego usando tilemap.
 Para crear un tilemap, seguimos los siguientes pasos.
 
-![alt text](image-17.png)
-![alt text](image-18.png)
+![alt text](imgs_Readme/image-17.png)
+![alt text](imgs_Readme/image-18.png)
 
 Ahora tenemos un timemap, abrimos la palete de timemap y creamos uno nuevo.
 
-![alt text](image-19.png)
+![alt text](imgs_Readme/image-19.png)
 
 Importar los ficheros importados.
 
-![alt text](image-20.png)
+![alt text](imgs_Readme/image-20.png)
 
 Cambiamos el tamaño de tiles para ajustar cada con una rejilla.
 
-![alt text](image-21.png)
+![alt text](imgs_Readme/image-21.png)
 
 Añadir tiles para construir nuestro mapa.
 
-![alt text](image-22.png)
+![alt text](imgs_Readme/image-22.png)
 
 ## El uso de varios Tilemaps.
 
 ### 1. crear dos Tilemaps adicionales de obstáculos. uno decorativos y otro obstáculos.
 
-![alt text](image-23.png)
+![alt text](imgs_Readme/image-23.png)
 
 ### 2. Agrega a la capa de obstáculos la configuración necesaria para que el Tilemap se construya de forma independiente y el obstáculo actúe como tal. 
 
 Agregamos a Tilemaps Tilemap Colliders, y cambiamos a composite operation a Merge, y añadir Composite Collider 2D, así tenemos los tiles de forma independiente.
 
-![alt text](image-24.png)
+![alt text](imgs_Readme/image-24.png)
 
 Resultado:
 
-![alt text](Unity_G7trtt3Mpt.gif)
+![alt text](imgs_Readme/Unity_G7trtt3Mpt.gif)
 
 ### 3. Implementar mécanicas útiles.
 
@@ -311,7 +311,7 @@ public class PlayerMovement : MonoBehaviour
 
 Resultado: se puede ver que el personaje puede mover hacia 4 drecciones pero con animación única.
 
-![alt text](Unity_oJrlEEEeXQ.gif)
+![alt text](imgs_Readme/Unity_oJrlEEEeXQ.gif)
 
 ### 3.2 Control del personaje 2D con rotación y avance hacia adelante
 
@@ -357,4 +357,4 @@ Resultado:
 
 Aunque es un poco raro hacer con este personaje, pero se puede ver que el personaje siempre avanza hacia delante, ya no podemos usar izquierda y derecha para contro su eje horizontal, sino tenemos que girar hacia donde queramos y avanzar.
 
-![alt text](Unity_ej1Amk8Uv2.gif)
+![alt text](imgs_Readme/Unity_ej1Amk8Uv2.gif)
