@@ -258,3 +258,103 @@ Agregamos a Tilemaps Tilemap Colliders, y cambiamos a composite operation a Merg
 Resultado:
 
 ![alt text](Unity_G7trtt3Mpt.gif)
+
+### 3. Implementar mécanicas útiles.
+
+### 3.1 Control del personaje 2D
+
+En la parte de Control de personaje 2D, implemento un control para el personaje usando el pseudocódigo de la práctica completamento los códigos que faltan. 
+
+**PlayerMovement.cs**: Conseguimos que se puede mover el personaje arriba, abajo, izquierda y derecha.
+
+```
+using UnityEngine;
+
+public class PlayerMovement : MonoBehaviour
+{
+    // Declarar la velocidad de tipo float
+    public float speed = 10.0f;
+    // Declarar la variable que representará al SpriteRenderer para controlar el 'flip'
+    private SpriteRenderer spriteRenderer;
+
+    void Start()
+    {
+        // Obtener la referencia al SpriteRenderer una sola vez (eficiencia)
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    void Update()
+    {
+        // 1. Obtener la entrada con la clase Input
+        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        float moveVertical = Input.GetAxisRaw("Vertical");
+
+
+        // 2. Calcular la traslación espacio = velocidad * tiempo.
+        Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0f).normalized;
+        transform.Translate(movement * speed * Time.deltaTime);
+
+        // La velocidad se ha declarado previamente, el tiempo lo da Time.deltaTime
+        // La traslación se puede hacer con el método Translate del Transform del objeto
+
+        // 3. Alterar la orientación del sprite según se mueva a izquierda o derecha
+        if (moveHorizontal < 0)
+        {
+            spriteRenderer.flipX = true;  // mirando a la izquierda
+        }
+        else if (moveHorizontal > 0)
+        {
+            spriteRenderer.flipX = false; // mirando a la derecha
+        }
+    }
+}
+```
+
+Resultado: se puede ver que el personaje puede mover hacia 4 drecciones pero con animación única.
+
+![alt text](Unity_oJrlEEEeXQ.gif)
+
+### 3.2 Control del personaje 2D con rotación y avance hacia adelante
+
+**RotacionYMovemientoLocal2D.cs** En el código realizo que el personaje 2D siempre avanza hacia delante o detrás, y puede rotar con las telcas <- / -> , siempre hacia la dirección donde está mirando.  
+
+```
+using UnityEngine;
+
+public class RotacionYMovimientoLocal2D : MonoBehaviour
+{
+    // Variables ajustables en el Inspector
+    // Velocidad de traslación hacia adelante
+    public float speed = 5f;
+    // Velocidad de rotación (grados por segundo)
+    public float rotationSpeed = 200f;
+
+    void Update()
+    {
+        // 1. OBTENER LAS ENTRADAS
+
+        // Input para la rotación (izquierda/derecha) con el eje Horizontal
+        float rotationInput = Input.GetAxis("Horizontal"); // izquierda/derecha
+
+        // Input para el movimiento hacia adelante/atrás con el eje Vertical
+        float moveInput = Input.GetAxis("Vertical");       // arriba/abajo
+
+
+        // 2. APLICAR ROTACIÓN (Giro del Objeto sobre el Eje Z) proporcional a Time.deltaTime para suavizar el giro.
+        // Gira el objeto sobre su Eje Z. El componente Transform tiene la función Rotar.
+        transform.Rotate(0, 0, -rotationInput * rotationSpeed * Time.deltaTime);
+
+        // 3. APLICAR TRASLACIÓN EN EL ESPACIO LOCAL (Avanzar), una vez que hemos rotado.
+        // Creamos un vector que solo tiene movimiento en el EJE Y, porque ya se ha rotado.
+        // transform.Translate() con Space.Self es la clave, en este caso es necesario mover el objeto en la dirección que mira (su espacio local),
+        // no en el espacio global.
+        Vector3 movement = new Vector3(0, moveInput * speed * Time.deltaTime, 0);
+        transform.Translate(movement, Space.Self);
+    }
+}
+```
+
+Resultado:
+
+Aunque es un poco raro hacer con este personaje, pero se puede ver que el personaje siempre avanza hacia delante, ya no podemos usar izquierda y derecha para contro su eje horizontal, sino tenemos que girar hacia donde queramos y avanzar.
+
+![alt text](Unity_ej1Amk8Uv2.gif)
